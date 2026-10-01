@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shapelark — 3D product renders for small brands</title>
+<meta name="description" content="Studio-quality 3D product images and turntable videos for e-commerce brands. Catalog, lifestyle, and hero shots from your product photos — no photo shoot needed.">
+<meta property="og:title" content="Shapelark — 3D product renders">
+<meta property="og:description" content="Catalog, lifestyle, and hero product images from your product photos. No photo shoot.">
+<meta property="og:image" content="https://shapelark.com/img/portfolio-lifestyle.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='55' r='38' fill='%23c8742f'/></svg>">
+<style>
+  :root { --ink: #1d1b19; --muted: #6b645d; --bg: #faf7f3; --card: #fff; --accent: #c8742f; --line: #e9e2d9; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; }
+  .logo { font-weight: 700; font-size: 21px; letter-spacing: -0.02em; text-decoration: none; }
+  .logo span { color: var(--accent); }
+  nav a { margin-left: 22px; text-decoration: none; color: var(--muted); font-size: 15px; }
+  .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding: 40px 0 72px; }
+  h1 { font-size: clamp(36px, 5vw, 58px); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 18px; }
+  .lede { font-size: 19px; color: var(--muted); max-width: 34em; }
+  .cta { display: inline-block; margin-top: 22px; padding: 14px 24px; border-radius: 999px; background: var(--ink); color: #fff; text-decoration: none; font-weight: 600; }
+  .cta.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); margin-left: 8px; }
+  .hero video { width: 100%; border-radius: 18px; background: #000; display: block; }
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 32px; letter-spacing: -0.02em; margin: 0 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 32px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  figure { margin: 0; background: var(--card); border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+  figure img { width: 100%; display: block; aspect-ratio: 4 / 5; object-fit: cover; }
+  figcaption { padding: 14px 16px; font-size: 15px; }
+  figcaption b { display: block; }
+  figcaption span { color: var(--muted); }
+  .wide img { aspect-ratio: 16 / 9; }
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .plan { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px; }
+  .plan.pick { border-color: var(--ink); }
+  .price { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; margin: 6px 0 12px; }
+  .price small { font-size: 15px; color: var(--muted); font-weight: 500; }
+  .plan ul { padding-left: 18px; margin: 0; color: var(--muted); }
+  .plan li { margin: 6px 0; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: s; }
+  .step { padding: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
+  .step::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; margin-bottom: 10px; }
+  .contact { text-align: center; }
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
+  @media (max-width: 860px) {
+    .hero, .grid, .plans, .steps { grid-template-columns: 1fr; }
+    .hero { padding-top: 12px; gap: 28px; }
+    nav { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">shape<span>lark</span></a>
+    <nav><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#printables">Printables</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>Product images that sell, without the photo shoot.</h1>
+      <p class="lede">Send us your product photos and measurements. We build an accurate 3D model and deliver studio-quality catalog, lifestyle, and hero images, plus turntable video. New colors and angles take hours, not reshoots.</p>
+      <a class="cta" href="#contact">Get a free sample render</a><a class="cta ghost" href="#pricing">See pricing</a>
+    </div>
+    <video src="img/hero.mp4" poster="img/portfolio-hero.jpg" autoplay muted loop playsinline></video>
+  </div>
+
+  <section id="work">
+    <h2>Work</h2>
+    <p class="sub">Every image below is a 3D render — no camera involved.</p>
+    <div class="grid">
+      <figure><img src="img/portfolio-catalog.jpg" alt="Three insulated tumblers in sage, sand and ink on white" loading="lazy"><figcaption><b>Catalog</b><span>Pure white background, every colorway, marketplace-ready.</span></figcaption></figure>
+      <figure><img src="img/portfolio-lifestyle.jpg" alt="Amber candle jar with kraft label on a stone slab" loading="lazy"><figcaption><b>Lifestyle</b><span>Styled scenes with props and natural light.</span></figcaption></figure>
+      <figure><img src="img/portfolio-hero.jpg" alt="Frosted dropper bottle on a dark pedestal with rim lighting" loading="lazy"><figcaption><b>Hero</b><span>Dramatic launch and ad images, plus 360° video.</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <p class="sub">Per product. Your 3D model is reusable, so every later image costs less.</p>
+    <div class="plans">
+      <div class="plan"><b>Catalog</b><div class="price">$60 <small>/ product</small></div><ul><li>1 white-background image, 2000 px</li><li>Accurate 3D model from your photos</li><li>2 revisions, 3-day delivery</li></ul></div>
+      <div class="plan pick"><b>Launch</b><div class="price">$180 <small>/ product</small></div><ul><li>3 catalog angles + 1 lifestyle scene</li><li>All colorways at no extra cost</li><li>3 revisions, 5-day delivery</li></ul></div>
+      <div class="plan"><b>Hero</b><div class="price">$350 <small>/ product</small></div><ul><li>Everything in Launch</li><li>Hero image + 4-second turntable video</li><li>Source files for future edits</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <p class="sub">No studio, no shipping samples.</p>
+    <div class="steps">
+      <div class="step"><b>Send</b><br>Product photos from a few angles and rough dimensions.</div>
+      <div class="step"><b>Preview</b><br>A first render within days, to check shape and colors.</div>
+      <div class="step"><b>Refine</b><br>Adjust materials, lighting, and styling until it's right.</div>
+      <div class="step"><b>Deliver</b><br>Full-resolution images and video, sized for every channel.</div>
+    </div>
+  </section>
+
+  <section id="printables">
+    <h2>Printables</h2>
+    <p class="sub">Parametric 3D-printable designs, sized to fit your desk, phone, and gear.</p>
+    <div class="grid">
+      <figure><img src="img/portfolio-phone-stand.jpg" alt="3D-printable phone stand" loading="lazy"><figcaption><b>Phone stand</b><span>Any angle, any phone or case thickness.</span></figcaption></figure>
+      <figure><img src="img/showcase-printable.jpg" alt="3D-printable under-desk headphone hook" loading="lazy"><figcaption><b>Headphone hook</b><span>Clamps under any desk, no screws.</span></figcaption></figure>
+      <figure><img src="img/portfolio-cable-clip.jpg" alt="3D-printable desk-edge cable organizer" loading="lazy"><figcaption><b>Cable clip</b><span>Desk-edge organizer, prints without supports.</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get a free sample render</h2>
+    <p class="sub">Send a link to your product page. We'll render one of your products for free so you can see the quality before you pay anything.</p>
+    <a class="cta" href="mailto:hello@shapelark.com?subject=Free%20sample%20render">hello@shapelark.com</a>
+  </section>
+
+  <footer>© 2026 Shapelark</footer>
+</div>
+</body>
+</html>
