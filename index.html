@@ -2,122 +2,457 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shapelark — 3D product renders for small brands</title>
-<meta name="description" content="Studio-quality 3D product images and turntable videos for e-commerce brands. Catalog, lifestyle, and hero shots from your product photos — no photo shoot needed.">
-<meta property="og:title" content="Shapelark — 3D product renders">
-<meta property="og:description" content="Catalog, lifestyle, and hero product images from your product photos. No photo shoot.">
-<meta property="og:image" content="https://shapelark.com/img/portfolio-lifestyle.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='55' r='38' fill='%23c8742f'/></svg>">
-<style>
-  :root { --ink: #1d1b19; --muted: #6b645d; --bg: #faf7f3; --card: #fff; --accent: #c8742f; --line: #e9e2d9; }
-  * { box-sizing: border-box; }
-  body { margin: 0; font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
-  a { color: inherit; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
-  header { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; }
-  .logo { font-weight: 700; font-size: 21px; letter-spacing: -0.02em; text-decoration: none; }
-  .logo span { color: var(--accent); }
-  nav a { margin-left: 22px; text-decoration: none; color: var(--muted); font-size: 15px; }
-  .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding: 40px 0 72px; }
-  h1 { font-size: clamp(36px, 5vw, 58px); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 18px; }
-  .lede { font-size: 19px; color: var(--muted); max-width: 34em; }
-  .cta { display: inline-block; margin-top: 22px; padding: 14px 24px; border-radius: 999px; background: var(--ink); color: #fff; text-decoration: none; font-weight: 600; }
-  .cta.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); margin-left: 8px; }
-  .hero video { width: 100%; border-radius: 18px; background: #000; display: block; }
-  section { padding: 64px 0; border-top: 1px solid var(--line); }
-  h2 { font-size: 32px; letter-spacing: -0.02em; margin: 0 0 8px; }
-  .sub { color: var(--muted); margin: 0 0 32px; }
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  figure { margin: 0; background: var(--card); border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
-  figure img { width: 100%; display: block; aspect-ratio: 4 / 5; object-fit: cover; }
-  figcaption { padding: 14px 16px; font-size: 15px; }
-  figcaption b { display: block; }
-  figcaption span { color: var(--muted); }
-  .wide img { aspect-ratio: 16 / 9; }
-  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .plan { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px; }
-  .plan.pick { border-color: var(--ink); }
-  .price { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; margin: 6px 0 12px; }
-  .price small { font-size: 15px; color: var(--muted); font-weight: 500; }
-  .plan ul { padding-left: 18px; margin: 0; color: var(--muted); }
-  .plan li { margin: 6px 0; }
-  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: s; }
-  .step { padding: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
-  .step::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; margin-bottom: 10px; }
-  .contact { text-align: center; }
-  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
-  @media (max-width: 860px) {
-    .hero, .grid, .plans, .steps { grid-template-columns: 1fr; }
-    .hero { padding-top: 12px; gap: 28px; }
-    nav { display: none; }
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shapelark | 3D product renders for small brands</title>
+<meta name="description" content="Catalog shots on white, lifestyle scenes, hero images and 360° turntables, rendered in 3D from your product photos. No samples shipped, no studio booked. Get a free sample render of one product.">
+<link rel="canonical" href="https://shapelark.com/">
+<meta name="theme-color" content="#1b1411">
+<meta name="color-scheme" content="light">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shapelark">
+<meta property="og:url" content="https://shapelark.com/">
+<meta property="og:title" content="Shapelark | Your product, in its best light">
+<meta property="og:description" content="3D product renders for Shopify, Etsy and Amazon brands. Catalog on white, lifestyle scenes, hero images and 360° turntables, without a photo shoot. Your first render is free.">
+<meta property="og:image" content="https://shapelark.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A 3D-rendered amber perfume bottle and terracotta jar on travertine in warm window light">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shapelark | Your product, in its best light">
+<meta name="twitter:description" content="3D product renders for small brands. Your first render is free.">
+<meta name="twitter:image" content="https://shapelark.com/img/og.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1411'/%3E%3Cpath d='M18 44 L32 16 L46 44 Z' fill='none' stroke='%23e9a35a' stroke-width='4' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='36' r='4.5' fill='%23f3ece3'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+
+<link rel="preload" as="image" href="img/hero-1600.jpg" imagesrcset="img/hero-1600.jpg 1600w, img/hero-2400.jpg 2400w" imagesizes="100vw" media="(min-width: 761px)">
+<link rel="preload" as="image" href="img/hero-portrait-720.jpg" imagesrcset="img/hero-portrait-720.jpg 720w, img/hero-portrait-1080.jpg 1080w" imagesizes="100vw" media="(max-width: 760px)">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Shapelark",
+  "url": "https://shapelark.com/",
+  "email": "hello@shapelark.com",
+  "image": "https://shapelark.com/img/og.jpg",
+  "description": "3D product renders for small e-commerce brands: catalog images on white, lifestyle scenes, hero images and 360° turntable videos, made from product photos and dimensions.",
+  "makesOffer": [
+    {"@type": "Offer", "name": "Catalog", "price": "60", "priceCurrency": "USD", "description": "1 white-background image, 2 revisions, 3-day delivery, per product"},
+    {"@type": "Offer", "name": "Launch", "price": "180", "priceCurrency": "USD", "description": "3 angles and 1 lifestyle scene, all colorways, 3 revisions, 5-day delivery, per product"},
+    {"@type": "Offer", "name": "Hero", "price": "350", "priceCurrency": "USD", "description": "Launch plus a hero image, a 4-second turntable video and the .blend source scene, 7-day delivery, per product"}
+  ]
+}
+</script>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <a class="logo" href="/">shape<span>lark</span></a>
-    <nav><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#printables">Printables</a><a href="#contact">Contact</a></nav>
-  </header>
+<a class="skip" href="#main">Skip to content</a>
 
-  <div class="hero">
-    <div>
-      <h1>Product images that sell, without the photo shoot.</h1>
-      <p class="lede">Send us your product photos and measurements. We build an accurate 3D model and deliver studio-quality catalog, lifestyle, and hero images, plus turntable video. New colors and angles take hours, not reshoots.</p>
-      <a class="cta" href="#contact">Get a free sample render</a><a class="cta ghost" href="#pricing">See pricing</a>
+<header class="site-header" data-header>
+  <div class="bar">
+    <a class="brand" href="#top" aria-label="Shapelark, back to top">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 26 L16 5 L27 26 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="20" r="3.2" fill="var(--amber)"/></svg>
+      <span>Shapelark</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-small" href="#sample">Free sample</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <figure class="hero-media">
+      <picture>
+        <source media="(max-width: 760px)" srcset="img/hero-portrait-720.jpg 720w, img/hero-portrait-1080.jpg 1080w" sizes="100vw" width="1080" height="1350">
+        <img src="img/hero-1600.jpg" srcset="img/hero-1600.jpg 1600w, img/hero-2400.jpg 2400w" sizes="100vw" width="2400" height="1500"
+             alt="An amber perfume bottle with a dark cap, a small glass vial and a terracotta jar on honed travertine, with warm afternoon window light falling across a plaster wall."
+             fetchpriority="high" decoding="async">
+      </picture>
+      <figcaption class="hero-caption"><span class="dot" aria-hidden="true"></span>Rendered, not photographed. MAREA is a fictional product we modeled and lit for this page.</figcaption>
+    </figure>
+    <div class="hero-copy">
+      <div class="hero-head">
+        <p class="eyebrow">3D product renders for independent brands</p>
+        <h1 id="hero-title">Your product,<br><em>in its best light.</em></h1>
+      </div>
+      <p class="lede">Send us photos and dimensions. We build an accurate 3D model and deliver catalog shots on white, styled lifestyle scenes, hero images and 360° turntables. No samples shipped, no studio booked.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#sample">Get a free sample render <span aria-hidden="true" class="arrow">→</span></a>
+        <a class="btn btn-ghost" href="#pricing">See pricing</a>
+      </div>
+      <p class="fine">One product rendered free. No samples to ship, no studio to book, no payment details.</p>
     </div>
-    <video src="img/hero.mp4" poster="img/portfolio-hero.jpg" autoplay muted loop playsinline></video>
+  </section>
+
+  <div class="strip" aria-label="What Shapelark makes">
+    <div class="wrap strip-inner">
+      <p class="strip-label">One 3D model, every image you need</p>
+      <ul class="strip-list" role="list">
+        <li><a href="#w-catalog">Catalog</a></li>
+        <li><a href="#w-lifestyle">Lifestyle</a></li>
+        <li><a href="#w-hero">Hero images</a></li>
+        <li><a href="#w-turntable">360° motion</a></li>
+      </ul>
+    </div>
   </div>
 
-  <section id="work">
-    <h2>Work</h2>
-    <p class="sub">Every image below is a 3D render — no camera involved.</p>
-    <div class="grid">
-      <figure><img src="img/portfolio-catalog.jpg" alt="Three insulated tumblers in sage, sand and ink on white" loading="lazy"><figcaption><b>Catalog</b><span>Pure white background, every colorway, marketplace-ready.</span></figcaption></figure>
-      <figure><img src="img/portfolio-lifestyle.jpg" alt="Amber candle jar with kraft label on a stone slab" loading="lazy"><figcaption><b>Lifestyle</b><span>Styled scenes with props and natural light.</span></figcaption></figure>
-      <figure><img src="img/portfolio-hero.jpg" alt="Frosted dropper bottle on a dark pedestal with rim lighting" loading="lazy"><figcaption><b>Hero</b><span>Dramatic launch and ad images, plus 360° video.</span></figcaption></figure>
+  <!-- MODEL VS RENDER -->
+  <section class="section dark" id="craft" aria-labelledby="craft-title">
+    <div class="wrap craft">
+      <div class="craft-copy reveal">
+        <p class="kicker"><span>01</span> How the image above was made</p>
+        <h2 id="craft-title">Built, not<br><em>photographed.</em></h2>
+        <p>Drag across the image. On the left is the bare 3D model: every shape measured and built from scratch. On the right, the same scene with glass, liquid, brass, glaze and stone applied and the light set like a studio shoot.</p>
+        <ul class="ticks">
+          <li><b>Shape from your dimensions.</b> Modeled to the measurements you send, checked against your photos.</li>
+          <li><b>Colors from your swatches.</b> Pantone, hex or a reference photo. Each colorway is a material change, not a reshoot.</li>
+          <li><b>Light you can repeat.</b> The set is saved, so next season's products match this season's.</li>
+        </ul>
+      </div>
+      <div class="compare reveal" data-compare style="--pos: 66%">
+        <picture class="layer layer-final">
+          <source media="(max-width: 760px)" srcset="img/hero-portrait-720.jpg 720w, img/hero-portrait-1080.jpg 1080w" sizes="100vw">
+          <img src="img/hero-1600.jpg" srcset="img/hero-1600.jpg 1600w, img/hero-2400.jpg 2400w" sizes="(min-width: 1100px) 60vw, 100vw" width="2400" height="1500" loading="lazy" decoding="async"
+               alt="Final render: the perfume bottle, vial and jar with full materials and warm light.">
+        </picture>
+        <picture class="layer layer-clay" aria-hidden="true">
+          <source media="(max-width: 760px)" srcset="img/hero-portrait-clay-720.jpg 720w, img/hero-portrait-clay-1080.jpg 1080w" sizes="100vw">
+          <img src="img/hero-clay-1600.jpg" srcset="img/hero-clay-1600.jpg 1600w, img/hero-clay-2400.jpg 2400w" sizes="(min-width: 1100px) 60vw, 100vw" width="2400" height="1500" loading="lazy" decoding="async" alt="">
+        </picture>
+        <span class="tag tag-l">3D model</span>
+        <span class="tag tag-r">Final render</span>
+        <span class="handle" aria-hidden="true"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+        <label class="sr-only" for="compare-range">Reveal the bare 3D model or the final render</label>
+        <input id="compare-range" class="compare-range" type="range" min="0" max="100" value="50" step="1">
+      </div>
     </div>
   </section>
 
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <p class="sub">Per product. Your 3D model is reusable, so every later image costs less.</p>
-    <div class="plans">
-      <div class="plan"><b>Catalog</b><div class="price">$60 <small>/ product</small></div><ul><li>1 white-background image, 2000 px</li><li>Accurate 3D model from your photos</li><li>2 revisions, 3-day delivery</li></ul></div>
-      <div class="plan pick"><b>Launch</b><div class="price">$180 <small>/ product</small></div><ul><li>3 catalog angles + 1 lifestyle scene</li><li>All colorways at no extra cost</li><li>3 revisions, 5-day delivery</li></ul></div>
-      <div class="plan"><b>Hero</b><div class="price">$350 <small>/ product</small></div><ul><li>Everything in Launch</li><li>Hero image + 4-second turntable video</li><li>Source files for future edits</li></ul></div>
+  <!-- WORK -->
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section-head section-head-split reveal">
+        <div>
+          <p class="kicker"><span>02</span> Work</p>
+          <h2 id="work-title">Small brand. <em>Big presence.</em></h2>
+        </div>
+        <p class="section-note">Every image here is a studio demo: fictional products, modeled, lit and rendered in 3D, no camera involved. Judge the craft before you spend anything. Your product could be the first real one on this page.</p>
+      </div>
+
+      <div class="bento">
+        <div class="bento-row row-a">
+          <figure class="work" id="w-catalog">
+            <div class="frame frame-white ar-square"><img src="img/catalog-erra-1000.jpg" srcset="img/catalog-erra-1000.jpg 1000w, img/catalog-erra-1600.jpg 1600w" sizes="(min-width: 761px) 42vw, 100vw" width="1600" height="1600" loading="lazy" decoding="async" alt="Catalog shot on pure white: a white erra botanical wash pump bottle, a terracotta balm jar with an aluminium lid and a sage soap bar on a metal dish, with soft contact shadows."></div>
+            <figcaption><span class="w-label">Catalog</span><span class="w-text">Pure #FFFFFF background, soft contact shadow. Ready for Amazon, Shopify and Etsy.</span></figcaption>
+          </figure>
+          <figure class="work" id="w-lifestyle">
+            <div class="frame fill">
+              <picture>
+                <source media="(max-width: 760px)" srcset="img/hollow-skincare-mobile-720.jpg">
+                <img src="img/hollow-skincare-1000.jpg" srcset="img/hollow-skincare-1000.jpg 1000w, img/hollow-skincare-1600.jpg 1600w" sizes="(min-width: 761px) 58vw, 100vw" width="1600" height="1000" loading="lazy" decoding="async" alt="Lifestyle scene: a cream Hollow hand balm pump, a terracotta barrier cream jar on a sage dish and an amber dropper bottle on a stone shelf in soft window light.">
+              </picture>
+            </div>
+            <figcaption><span class="w-label">Lifestyle</span><span class="w-text">A styled scene with surfaces, props and daylight, so shoppers can picture it at home.</span></figcaption>
+          </figure>
+        </div>
+        <div class="bento-row row-b">
+          <figure class="work" id="w-hero">
+            <div class="frame fill">
+              <picture>
+                <source media="(max-width: 760px)" srcset="img/sol-sunscreen-portrait-720.jpg">
+                <img src="img/sol-sunscreen-1000.jpg" srcset="img/sol-sunscreen-1000.jpg 1000w, img/sol-sunscreen-1600.jpg 1600w" sizes="(min-width: 761px) 58vw, 100vw" width="1600" height="1000" loading="lazy" decoding="async" alt="Hero image: a sôl Daily Shade SPF 30 sunscreen bottle with a vermilion cap, its carton and an After Hours balm jar, framed by a terracotta arch on an apricot set.">
+              </picture>
+            </div>
+            <figcaption><span class="w-label">Hero</span><span class="w-text">A campaign image for launches, ads and the top of your store.</span></figcaption>
+          </figure>
+          <figure class="work" id="w-turntable">
+            <div class="frame frame-video ar-square">
+              <video data-autoplay muted loop playsinline preload="none" poster="img/turntable-marea.jpg" width="1080" height="1080" aria-label="Five-second 360-degree turntable of the MAREA perfume bottle rotating on a travertine pedestal.">
+                <source src="media/turntable-marea.mp4" type="video/mp4">
+              </video>
+              <span class="badge-360" aria-hidden="true">360°</span>
+              <button class="video-toggle" type="button" data-video-toggle aria-pressed="false"><svg class="vt-icon vt-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg><svg class="vt-icon vt-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5h3v11H4zM9 2.5h3v11H9z" fill="currentColor"/></svg><span class="vt-text vt-play">Play the turn</span><span class="vt-text vt-pause">Pause</span></button>
+            </div>
+            <figcaption><span class="w-label">Turntable</span><span class="w-text">A seamless 360° loop for product pages, Reels and TikTok.</span></figcaption>
+          </figure>
+        </div>
+        <div class="bento-row row-c">
+          <figure class="work" id="w-colorways">
+            <div class="frame fill">
+              <img src="img/colorways-1000.jpg" srcset="img/colorways-1000.jpg 1000w, img/colorways-1600.jpg 1600w" sizes="(min-width: 761px) 58vw, 100vw" width="1600" height="1200" loading="lazy" decoding="async" alt="Colorways: three sôl sunscreen bottles side by side, in sand with an olive cap, sage with a vermilion cap and deep olive with an orange cap.">
+            </div>
+            <figcaption><span class="w-label">Colorways</span><span class="w-text">One model, three finishes. A new colorway is a material change, not a reshoot.</span></figcaption>
+          </figure>
+          <figure class="work" id="w-scene">
+            <div class="frame ar-portrait"><img src="img/erra-bath-portrait-720.jpg" width="900" height="1125" loading="lazy" decoding="async" alt="Art-directed set: an erra botanical wash bottle, balm jar and soap on a curved terracotta paper sweep with a hard sunlit shadow."></div>
+            <figcaption><span class="w-label">Set design</span><span class="w-text">Paper sweeps, sculpted props and hard sunlight, art-directed to your brand colors.</span></figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>How it works</h2>
-    <p class="sub">No studio, no shipping samples.</p>
-    <div class="steps">
-      <div class="step"><b>Send</b><br>Product photos from a few angles and rough dimensions.</div>
-      <div class="step"><b>Preview</b><br>A first render within days, to check shape and colors.</div>
-      <div class="step"><b>Refine</b><br>Adjust materials, lighting, and styling until it's right.</div>
-      <div class="step"><b>Deliver</b><br>Full-resolution images and video, sized for every channel.</div>
+  <!-- WHY 3D -->
+  <section class="section paper-2" id="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker"><span>03</span> Why render instead of shoot</p>
+        <h2 id="why-title">A photo shoot captures one moment. <em>A model keeps working.</em></h2>
+      </div>
+      <div class="why-grid">
+        <article class="why reveal">
+          <h3>Every colorway, one model</h3>
+          <p>New finish, new label, new color: we change the material and render again. No new samples, no second shoot.</p>
+        </article>
+        <article class="why reveal">
+          <h3>Before stock arrives</h3>
+          <p>Prototype in hand, or just good photos of one? That is enough to build pre-launch listings and ads.</p>
+        </article>
+        <article class="why reveal">
+          <h3>A catalog that matches</h3>
+          <p>The same light, angle and shadow on every product, so your store grid looks like one brand instead of ten photo days.</p>
+        </article>
+        <article class="why reveal">
+          <h3>Accurate materials</h3>
+          <p>Glass that refracts, metal that reflects, matte that stays matte. Colors matched to the swatches you send.</p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="printables">
-    <h2>Printables</h2>
-    <p class="sub">Parametric 3D-printable designs, sized to fit your desk, phone, and gear.</p>
-    <div class="grid">
-      <figure><img src="img/portfolio-phone-stand.jpg" alt="3D-printable phone stand" loading="lazy"><figcaption><b>Phone stand</b><span>Any angle, any phone or case thickness.</span></figcaption></figure>
-      <figure><img src="img/showcase-printable.jpg" alt="3D-printable under-desk headphone hook" loading="lazy"><figcaption><b>Headphone hook</b><span>Clamps under any desk, no screws.</span></figcaption></figure>
-      <figure><img src="img/portfolio-cable-clip.jpg" alt="3D-printable desk-edge cable organizer" loading="lazy"><figcaption><b>Cable clip</b><span>Desk-edge organizer, prints without supports.</span></figcaption></figure>
+  <!-- PROCESS -->
+  <section class="section" id="process" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker"><span>04</span> How it works</p>
+        <h2 id="process-title">From your phone photos to <em>finished files.</em></h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-n">01</span>
+          <h3>Send</h3>
+          <p>Photos from a few angles (a phone is fine), dimensions, color references and any label artwork.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">02</span>
+          <h3>Model</h3>
+          <p>We build the 3D model and send a first preview within 2 business days, so you can check shape and proportions before materials go on.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">03</span>
+          <h3>Light and refine</h3>
+          <p>Materials, colors, set and lighting. You review the render and ask for changes; revision rounds are included in every plan.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">04</span>
+          <h3>Deliver</h3>
+          <p>Full-resolution files sized for your store, marketplaces and social. We keep your model ready for the next colorway.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Get a free sample render</h2>
-    <p class="sub">Send a link to your product page. We'll render one of your products for free so you can see the quality before you pay anything.</p>
-    <a class="cta" href="mailto:hello@shapelark.com?subject=Free%20sample%20render">hello@shapelark.com</a>
+  <!-- PRICING -->
+  <section class="section paper-2" id="pricing" aria-labelledby="pricing-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker"><span>05</span> Pricing</p>
+        <h2 id="pricing-title">Simple, per product. <em>No day rates.</em></h2>
+        <p class="section-note">Prices in USD for one product. Your 3D model is kept, so later images and colorways of the same product cost less.</p>
+      </div>
+      <div class="plans">
+        <article class="plan reveal" aria-labelledby="plan-catalog">
+          <header>
+            <h3 id="plan-catalog">Catalog</h3>
+            <p class="plan-for">For marketplace listings</p>
+            <p class="price"><span class="cur">$</span>60<span class="per">/ product</span></p>
+          </header>
+          <ul>
+            <li>1 image on pure white</li>
+            <li>Accurate 3D model from your photos</li>
+            <li>2 revision rounds</li>
+            <li>Delivered in 3 business days</li>
+          </ul>
+          <a class="btn btn-line" href="#sample">Start with a free sample</a>
+        </article>
+        <article class="plan plan-featured reveal" aria-labelledby="plan-launch">
+          <p class="plan-badge">Built for a product launch</p>
+          <header>
+            <h3 id="plan-launch">Launch</h3>
+            <p class="plan-for">For a full product page</p>
+            <p class="price"><span class="cur">$</span>180<span class="per">/ product</span></p>
+          </header>
+          <ul>
+            <li>3 catalog angles</li>
+            <li>1 styled lifestyle scene</li>
+            <li>All colorways included</li>
+            <li>3 revision rounds</li>
+            <li>Delivered in 5 business days</li>
+          </ul>
+          <a class="btn btn-primary" href="#sample">Start with a free sample</a>
+        </article>
+        <article class="plan reveal" aria-labelledby="plan-hero">
+          <header>
+            <h3 id="plan-hero">Hero</h3>
+            <p class="plan-for">For ads and campaigns</p>
+            <p class="price"><span class="cur">$</span>350<span class="per">/ product</span></p>
+          </header>
+          <ul>
+            <li>Everything in Launch</li>
+            <li>1 hero image for ads and banners</li>
+            <li>4-second 360° turntable video</li>
+            <li>The .blend source scene</li>
+            <li>Delivered in 7 business days</li>
+          </ul>
+          <a class="btn btn-line" href="#sample">Start with a free sample</a>
+        </article>
+      </div>
+      <p class="plans-note reveal">Every plan starts with a first preview within 2 business days. Unusual shape, or a whole collection? <a href="mailto:hello@shapelark.com?subject=Collection%20quote">Write to us</a> and we'll quote it.</p>
+    </div>
   </section>
 
-  <footer>© 2026 Shapelark</footer>
-</div>
+  <!-- PRINTABLES -->
+  <section class="section" id="printables" aria-labelledby="printables-title">
+    <div class="wrap printables">
+      <div class="printables-copy reveal">
+        <p class="kicker"><span>06</span> Also from the studio</p>
+        <h2 id="printables-title">Printables, <em>made to fit.</em></h2>
+        <p>A small side line of parametric 3D-printable designs for the desk. Each one is generated from a few measurements, so it fits your exact phone, headphones or desk.</p>
+        <a class="link" href="mailto:hello@shapelark.com?subject=Printables">Ask about printables <span aria-hidden="true">→</span></a>
+      </div>
+      <ul class="print-list" role="list">
+        <li class="print reveal">
+          <svg viewBox="0 0 120 80" aria-hidden="true"><path d="M18 68 H102 M30 68 L70 14 L78 18 L48 68 M30 68 L22 58 L28 54" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M60 40 a22 22 0 0 1 16 -6" fill="none" stroke="var(--terra)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
+          <h3>Phone stand</h3>
+          <p>Set the viewing angle and your case thickness; the lip and cable slot follow.</p>
+          <dl><dt>Inputs</dt><dd>angle · case · width</dd></dl>
+        </li>
+        <li class="print reveal">
+          <svg viewBox="0 0 120 80" aria-hidden="true"><path d="M14 22 H106 M14 34 H106" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M40 22 V12 H80 V22 M60 34 V56 a10 10 0 0 0 10 10 H86 V58" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M96 22 V34" stroke="var(--terra)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
+          <h3>Headphone hook</h3>
+          <p>Clamps under the desk with no screws, sized to your desktop thickness.</p>
+          <dl><dt>Inputs</dt><dd>desk thickness · band width</dd></dl>
+        </li>
+        <li class="print reveal">
+          <svg viewBox="0 0 120 80" aria-hidden="true"><path d="M16 60 H104 V36 H16 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="34" cy="36" r="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="54" cy="36" r="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="74" cy="36" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="92" cy="36" r="5" fill="none" stroke="var(--terra)" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
+          <h3>Cable clip</h3>
+          <p>A desk-edge organizer with one slot per cable, each sized to its diameter.</p>
+          <dl><dt>Inputs</dt><dd>slots · cable sizes · edge</dd></dl>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section paper-2" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq">
+      <div class="faq-head reveal">
+        <p class="kicker"><span>07</span> FAQ</p>
+        <h2 id="faq-title">Good <em>questions.</em></h2>
+        <p>Anything else? Write to <a href="mailto:hello@shapelark.com">hello@shapelark.com</a>.</p>
+      </div>
+      <div class="faq-list">
+        <details class="qa" open>
+          <summary>How long does it take?</summary>
+          <div class="qa-body"><p>You see a first preview within 2 business days of sending your photos and dimensions. Final delivery then follows the plan: Catalog in 3 business days, Launch in 5 and Hero in 7. For the free sample, we confirm the date when we reply.</p></div>
+        </details>
+        <details class="qa">
+          <summary>What do you need from me?</summary>
+          <div class="qa-body">
+            <ul>
+              <li>Clear photos from several angles: front, back, sides and top. Phone photos in daylight are fine.</li>
+              <li>Dimensions: height, width and depth, plus anything special like a lid or a handle.</li>
+              <li>Color and material references: Pantone or hex codes if you have them, or a photo next to a sheet of white paper.</li>
+              <li>Logo and label artwork, ideally as vector files (SVG, PDF or AI).</li>
+            </ul>
+          </div>
+        </details>
+        <details class="qa">
+          <summary>How do revisions work?</summary>
+          <div class="qa-body"><p>A revision round is one set of changes, for example “make the cap a little darker and turn the label toward the camera”. Catalog includes 2 rounds; Launch and Hero include 3. You also see a clay preview before materials go on, so shape problems are caught early.</p></div>
+        </details>
+        <details class="qa">
+          <summary>Which file formats do I get?</summary>
+          <div class="qa-body"><p>Full-resolution PNG and JPEG images, sized for your store, Amazon, Etsy and social, with transparent PNGs on request. Turntables are delivered as MP4 (H.264) video. The Hero plan also includes the .blend scene file, so the model, materials and lighting stay yours.</p></div>
+        </details>
+        <details class="qa">
+          <summary>Can I use the images anywhere?</summary>
+          <div class="qa-body"><p>Yes. You get full commercial usage rights to the delivered images and video, worldwide and with no expiry: your store, marketplaces, ads, social, packaging and print. We only show your product in our portfolio if you give us permission.</p></div>
+        </details>
+        <details class="qa">
+          <summary>Is the free sample really free?</summary>
+          <div class="qa-body"><p>Yes. We render one of your products, one image, at no cost and with no payment details. If you like it and go ahead, we keep building on the same model.</p></div>
+        </details>
+        <details class="qa">
+          <summary>What kinds of products work best?</summary>
+          <div class="qa-body"><p>Products with clear shapes and real materials: bottles, jars, cosmetics, drinkware, candles, small electronics, accessories and homeware. Soft goods such as clothing are harder; ask us first and we'll tell you honestly.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAMPLE / CONTACT -->
+  <section class="section sample" id="sample" aria-labelledby="sample-title">
+    <div class="sample-bg" aria-hidden="true"></div>
+    <div class="wrap sample-inner">
+      <div class="sample-copy reveal">
+        <p class="kicker"><span>08</span> Free sample render</p>
+        <h2 id="sample-title">Send one product.<br><em>We'll render it, free.</em></h2>
+        <p>See your own product in 3D before you spend anything. Email us and include:</p>
+        <ol class="send-list">
+          <li>A link to the product page, or 3 or more photos</li>
+          <li>Rough dimensions</li>
+          <li>The look you want: catalog white, lifestyle or hero</li>
+        </ol>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-large" href="mailto:hello@shapelark.com?subject=Free%20sample%20render&amp;body=Hi%20Shapelark%2C%0A%0AProduct%20link%20or%20photos%3A%20%0ADimensions%3A%20%0ALook%20I'd%20like%20(catalog%20white%20%2F%20lifestyle%20%2F%20hero)%3A%20%0A%0AThanks!">Email for a free sample <span aria-hidden="true" class="arrow">→</span></a>
+          <button class="btn btn-ghost-light copy" type="button" data-copy="hello@shapelark.com"><span data-copy-label>Copy email address</span></button>
+        </div>
+        <p class="email-plain">hello@shapelark.com</p>
+        <p class="sr-only" role="status" aria-live="polite" data-copy-status></p>
+      </div>
+      <figure class="sample-art reveal">
+        <img src="img/hero-portrait-clay-720.jpg" width="720" height="900" loading="lazy" decoding="async" alt="The bare clay 3D model of the perfume bottle, vial and jar in window light, before any materials are applied.">
+        <figcaption>Every project starts here: a clay model you can check before materials and light go on.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <a class="brand" href="#top" aria-label="Shapelark, back to top">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 26 L16 5 L27 26 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="20" r="3.2" fill="var(--amber)"/></svg>
+        <span>Shapelark</span>
+      </a>
+      <p>3D product renders for small brands.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#printables">Printables</a>
+      <a href="#faq">FAQ</a>
+      <a href="mailto:hello@shapelark.com">hello@shapelark.com</a>
+    </nav>
+    <p class="foot-note">Every image on this site is a studio demo rendered in 3D. The products and brands shown (MAREA, sôl, erra, Hollow) are fictional. &copy; 2026 Shapelark.</p>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
 </body>
 </html>
